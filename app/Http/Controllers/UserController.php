@@ -37,10 +37,28 @@ class UserController extends Controller
 
     public function logout(Request $request)
     {
-
-
         auth()->user()->tokens()->delete();
+        $firstName = auth()->user()->first_name;
+        $lastName = auth()->user()->last_name;
+        return response(['message' => "$firstName $lastName logged out!"], 200);
+    }
 
-        return ['message' => "You are now logged out!"];
+    public function login(Request $request) {
+        $fields = $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string'
+        ]);
+
+    
+        $user = User::where('email', $fields['email'])->first();
+
+        if(!$user || !Hash::check($fields['password'], $user->password)) {
+            return response(['message' => 'Access denied! Bad Credentials!'], 401);
+        }
+
+        $token = $user->createToken('userToken')->plainTextToken;
+        $response = ['user' => $user, 'token' => $token];
+
+        return response($response, 201);
     }
 }

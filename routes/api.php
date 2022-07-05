@@ -16,6 +16,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::post('/sign-in', [UserController::class, 'signIn']);
-
+Route::post('/login', [UserController::class, 'login']);
 
 Route::middleware('auth:sanctum')->post('/logout', [UserController::class, 'logout']);
+
