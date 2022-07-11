@@ -11,7 +11,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function signIn(Request $request)
+    public function signUp(Request $request)
     {
         $fields = $request->validate([
             'first_name' => 'required|string',

@@ -15,8 +15,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::post('/sign-in', [UserController::class, 'signIn']);
+
+
+
+Route::post('/sign-up', [UserController::class, 'signUp']);
 Route::post('/login', [UserController::class, 'login']);
+
 
 Route::middleware('auth:sanctum')->post('/logout', [UserController::class, 'logout']);
 
