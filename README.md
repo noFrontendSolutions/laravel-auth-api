@@ -10,10 +10,12 @@ is a simple authentication API created with **Laravel** and the **Laravel Sanctu
 **Fields**: email; password; 
 - **api/logout** <br>
 (Protected: autentication required via Bearer Token)
+<br>
 
-##Installation
+## Installation
 
 ---
+
 Get a clone of this repository:
 ```bash
 git clone https://github.com/noFrontendSolutions/laravel-auth-api
