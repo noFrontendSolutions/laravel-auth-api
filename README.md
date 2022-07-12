@@ -1,7 +1,7 @@
 # Laravel-Auth-API
 
 ---
-is a simple authentication API created with **Laravel** and the **Laravel Sanctum** package.
+is a simple authentication API created with **Laravel** and the **Laravel Sanctum** package, which uses **Bearer Tokens** for the authentication.
 
 ### Routes:
 - **api/sign-up**  
