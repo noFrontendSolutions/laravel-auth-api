@@ -1,7 +1,7 @@
 # Laravel-Auth-API
 
 ---
-is a simple authentication API created with **Laravel** and the **Laravel Sanctum** package, which uses **Bearer Tokens** for the authorization part.
+is a basic **Auth2** authentication API created with **Laravel** and the **Laravel Sanctum** package. It may come in handy as a scaffolding for a bigger project that also requires authentication. The user credentials and the personal access token (**Bearer Token**) can be stored in any SQL database that is supported by Laravel. 
 
 ### Routes:
 - **api/sign-up**  
@@ -9,10 +9,10 @@ is a simple authentication API created with **Laravel** and the **Laravel Sanctu
 - **api/login** <br>
 **Fields**: email; password; 
 - **api/logout** <br>
-(Protected: authorization required via Bearer Token)
+(Protected: authorization is required to delete the Bearer Token from the DB)
 <br>
 
-## Installation
+## Installation for MySQL
 
 ---
 
@@ -33,7 +33,7 @@ mysql --user <user> --password <password>
 create database <databaseName>;
 ```
 
-Rename **.env.example** file into **.env** and change the database related fields accordingly. The default would be this:
+Rename **.env.example** file into **.env** and change the database related fields accordingly. The MySQL default would be this:
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -46,7 +46,7 @@ Create **users** and **personal_access_tokens** tables with the following comman
 ```bash
 php artisan migrate
 ```
-And now you should be good to go:
+And now you should be ready to start the server:
 ```bash
 php artisan serve
 ```
