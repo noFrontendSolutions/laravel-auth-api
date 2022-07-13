@@ -1,4 +1,4 @@
-# Laravel-Auth-API
+# Laravel-Auth2-API
 
 ---
 is a basic **Auth2** authentication API created with **Laravel** and the **Laravel Sanctum** package. It may come in handy as a scaffolding for a bigger project that also requires authentication. The user credentials and the personal access token (**Bearer Token**) can be stored in any SQL database that is supported by Laravel. 
