@@ -9,7 +9,7 @@ is a basic **Auth2** authentication API created with **Laravel** and the **Larav
 - **api/login** <br>
 **Fields**: email; password; 
 - **api/logout** <br>
-(Protected: authorization is required to delete the Bearer Token from the DB)
+(Protected)
 <br>
 
 ## Installation for MySQL
