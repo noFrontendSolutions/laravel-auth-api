@@ -5,11 +5,10 @@ is a basic **Auth2** authentication API created with **Laravel** and the **Larav
 
 ### Routes:
 - **api/sign-up**  
-**Fields**: first_name; last_name; email; password; password_confirmation 
 - **api/login** <br>
-**Fields**: email; password; 
-- **api/logout** <br>
-(Protected)
+- **api/logout** (Protected)
+
+The required fields of the **User** model will be vallidated and unwanted database injections prevented. Conclusive error messages will be send to the Client.
 <br>
 
 ## Installation for MySQL
