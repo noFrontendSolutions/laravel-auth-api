@@ -18,7 +18,7 @@ is a basic **Auth2** authentication API created with **Laravel** and the **Larav
 
 Get a clone of this repository:
 ```bash
-git clone https://github.com/noFrontendSolutions/laravel-auth-api
+git clone https://github.com/noFrontendSolutions/laravel-auth2-api
 ```
 Change into the newly created directory and install all dependencies:
 
